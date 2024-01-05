@@ -20,6 +20,7 @@ map<ll, int> factorize(ll n) {
 ```
 
 ### Calculate Mod
+x % y = **x** - ('**biggest multiple of y**' which is 'less than x')
 
 ```
 auto mod(auto& x, auto& y) {
