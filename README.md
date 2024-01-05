@@ -18,3 +18,11 @@ map<ll, int> factorize(ll n) {
     return m;
 }
 ```
+
+### Calculate Mod
+
+```
+auto mod(auto& x, auto& y) {
+    return x >= 0? (x % y) : (((x % y) + y) % y);
+}
+```
