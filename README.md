@@ -62,7 +62,6 @@ int bigMod(int n, int p, int m) {
 ### Big Integer Reminder / Long Division
 
 ```
-auto mod(auto& x, auto& y) {
 ll bigIntRem(string num, ll m) {
     ll res = 0;
     
