@@ -59,7 +59,8 @@ int bigMod(int n, int p, int m) {
 }
 ```
 
-### Big Integer Reminder / Long Division
+### Big Integer Reminder / Large Division
+- [Article](https://www.shawonruet.com/2016/07/big-integer-remainder.html)
 
 ```
 ll bigIntRem(string& s, auto& m) {
