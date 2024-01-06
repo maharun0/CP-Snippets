@@ -63,19 +63,18 @@ int bigMod(int n, int p, int m) {
 
 ```
 auto mod(auto& x, auto& y) {
-    return x >= 0? (x % y) : (((x % y) + y) % y);
-}
-
-ll bigIntRemMod(string num, ll m) {
-    ll res = 0; 
+ll bigIntRem(string num, ll m) {
+    ll res = 0;
     
-    ll i = num.front() == '-'? 1 : 0;
-    for (; i < num.size(); i++) {
+    bool isNeg = (num[0] == '-');
+    for (ll i = isNeg; i < num.size(); i++) {
         int d = num[i] - '0';
         res = (res * 10) + d;
         res %= m;
     }
     
-    return mod(res, m);
+    if (isNeg) res = (-res + m) % m;
+    
+    return res;
 }
 ```
