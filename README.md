@@ -62,18 +62,15 @@ int bigMod(int n, int p, int m) {
 ### Big Integer Reminder / Long Division
 
 ```
-ll bigIntRem(string num, ll m) {
-    ll res = 0;
+ll bigIntRem(string& s, auto& m) {
+    ll r = 0;
     
-    bool isNeg = (num[0] == '-');
-    for (ll i = isNeg; i < num.size(); i++) {
-        int d = num[i] - '0';
-        res = (res * 10) + d;
-        res %= m;
-    }
+    bool isNeg = (s[0] == '-');
+    for (ll i = isNeg; i < s.size(); i++)
+        r = ((r * 10) + (s[i] - '0')) % m;
     
-    if (isNeg) res = (-res + m) % m;
+    if (isNeg) r = (-r + m) % m;
     
-    return res;
+    return r;
 }
 ```
