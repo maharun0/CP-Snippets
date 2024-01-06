@@ -7,13 +7,10 @@ map<ll, int> factorize(ll n) {
     
     for (int i = 2; i * i <= n; i++) {
         while (n % i == 0) {
-            m[i]++;
-            n /= i;
+            m[i]++, n /= i;
         }
     }
-    
-    if (n != 1)
-        m[n]++;
+    if (n != 1) m[n]++;
         
     return m;
 }
