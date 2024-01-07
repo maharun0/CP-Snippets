@@ -72,3 +72,10 @@ ll bigIntRem(string& s, auto& m) {
     return r;
 }
 ```
+
+### If a character/string exists in string
+```
+bool contains(string str, auto target) {
+    return (str.find(target) != string::npos);
+}
+```
